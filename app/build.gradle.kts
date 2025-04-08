@@ -36,6 +36,13 @@ android {
 }
 
 dependencies {
+    // Retrofit
+    val retrofitVersion = "2.11.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+    // Picasso
+    implementation("com.squareup.picasso:picasso:2.8")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
