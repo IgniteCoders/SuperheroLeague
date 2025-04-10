@@ -1,5 +1,6 @@
 package com.example.superheroleague.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -38,7 +39,13 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
 
-        adapter = SuperheroAdapter(superheroList)
+        adapter = SuperheroAdapter(superheroList) { position ->
+            val superhero = superheroList[position]
+
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.SUPERHERO_ID, superhero.id)
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
