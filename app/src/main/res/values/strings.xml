@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SuperheroLeague</string>
+
+    <string name="menu_search">Search</string>
 </resources>
