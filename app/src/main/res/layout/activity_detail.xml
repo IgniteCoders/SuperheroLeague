@@ -1,28 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activities.DetailActivity">
 
     <ImageView
         android:id="@+id/avatarImageView"
-        android:layout_width="280dp"
-        android:layout_height="360dp"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
         android:scaleType="centerCrop"
         tools:src="@drawable/ic_launcher_background"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/nameTextView"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Superhero name"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="32dp"
+        android:layout_marginTop="-32dp"
+        android:layout_marginBottom="-32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarImageView">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:menu="@menu/activity_detail_navigation" />
+
+            <LinearLayout
+                android:id="@+id/contentBiography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Publisher:"
+                        android:textAlignment="textEnd" />
+
+                    <TextView
+                        android:id="@+id/publisherTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        tools:text="DC Comics" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Place of birth:"
+                        android:textAlignment="textEnd" />
+
+                    <TextView
+                        android:id="@+id/placeOfBirthTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        tools:text="Kripton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alignment:"
+                        android:textAlignment="textEnd" />
+
+                    <TextView
+                        android:id="@+id/alignmentTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="2"
+                        android:textStyle="bold"
+                        tools:text="Good" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appearance" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Intelligence:"/>
+
+                    <TextView
+                        android:id="@+id/intelligenceTextView"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:textStyle="bold"
+                        tools:text="100" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/intelligenceProgress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:progress="30"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
