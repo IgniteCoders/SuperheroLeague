@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Intelligence -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intelligence:"/>
+
+        <TextView
+            android:id="@+id/intelligenceTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/intelligenceProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Strength -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Strength:"/>
+
+        <TextView
+            android:id="@+id/strengthTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/strengthProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Speed -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Speed:"/>
+
+        <TextView
+            android:id="@+id/speedTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/speedProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Durability -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Durability:"/>
+
+        <TextView
+            android:id="@+id/durabilityTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/durabilityProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Power -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Power:"/>
+
+        <TextView
+            android:id="@+id/powerTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/powerProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Combat -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Combat:"/>
+
+        <TextView
+            android:id="@+id/combatTextView"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            tools:text="100" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/combatProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:progress="30"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>
